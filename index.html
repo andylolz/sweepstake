@@ -5,6 +5,9 @@
 <style>
   img { border:1px solid #c7c6c6 !important; }
   thead th { text-align: center !important; }
+  table { width: 100% !important; }
+  td { vertical-align: middle !important; }
+  tr.sadface>td { background-color: #f2dede !important;  }
 </style>
 
 <xmp theme="cerulean" style="display:none;">
@@ -15,11 +18,11 @@
 |------|--------|--------|------|
 | ![Algeria](http://img.fifa.com/images/flags/3/alg.png) [Algeria](http://www.fifa.com/worldcup/teams/team=43843/groups.html) | Andy L | Still in with a chance! | 1000-1 |
 | ![Argentina](http://img.fifa.com/images/flags/3/arg.png) [Argentina](http://www.fifa.com/worldcup/teams/team=43922/groups.html) | Emma A ([*Well Grounded*](http://well-grounded.org/)) | Still in with a chance! | 4-1 |
-| ![Australia](http://img.fifa.com/images/flags/3/aus.png) [Australia](http://www.fifa.com/worldcup/teams/team=43976/groups.html) | Anna L | Still in with a chance! | 500-1 |
+| ![Australia](http://img.fifa.com/images/flags/3/aus.png) [Australia](http://www.fifa.com/worldcup/teams/team=43976/groups.html) | Anna L | They’re out :( | 500-1 |
 | ![Belgium](http://img.fifa.com/images/flags/3/bel.png) [Belgium](http://www.fifa.com/worldcup/teams/team=43935/groups.html) | Tom C ([*Raising IT*](http://www.raisingit.com)) | Still in with a chance! | 16-1 |
 | ![Bosnia and Herzegovina](http://img.fifa.com/images/flags/3/bih.png) [Bosnia and Herzegovina](http://www.fifa.com/worldcup/teams/team=44037/groups.html) | Morgan T | Still in with a chance! | 150-1 |
 | ![Brazil](http://img.fifa.com/images/flags/3/bra.png) [Brazil](http://www.fifa.com/worldcup/teams/team=43924/groups.html) | John C ([*Raising IT*](http://www.raisingit.com)) | Still in with a chance! | 3-1 |
-| ![Cameroon](http://img.fifa.com/images/flags/3/cmr.png) [Cameroon](http://www.fifa.com/worldcup/teams/team=43849/groups.html) | Rachel P ([*Wallace and Gromit's Children's Charity*](http://www.wallaceandgromitcharity.org/)) | Still in with a chance! | 500-1 |
+| ![Cameroon](http://img.fifa.com/images/flags/3/cmr.png) [Cameroon](http://www.fifa.com/worldcup/teams/team=43849/groups.html) | Rachel P ([*Wallace and Gromit's Children's Charity*](http://www.wallaceandgromitcharity.org/)) | They’re out :( | 500-1 |
 | ![Chile](http://img.fifa.com/images/flags/3/chi.png) [Chile](http://www.fifa.com/worldcup/teams/team=43925/groups.html) | Andy H ([*HixMedia*](http://www.hixmedia.co.uk/)) | Still in with a chance! | 40-1 |
 | ![Colombia](http://img.fifa.com/images/flags/3/col.png) [Colombia](http://www.fifa.com/worldcup/teams/team=43926/groups.html) | Caspar V | Still in with a chance! | 33-1 |
 | ![Costa Rica](http://img.fifa.com/images/flags/3/crc.png) [Costa Rica](http://www.fifa.com/worldcup/teams/team=43901/groups.html) | John B ([*Freybors*](http://freybors.com/)) | Still in with a chance! | 2500-1 |
@@ -41,7 +44,7 @@
 | ![Portugal](http://img.fifa.com/images/flags/3/por.png) [Portugal](http://www.fifa.com/worldcup/teams/team=43963/groups.html) | Kate B ([*Raising IT*](http://www.raisingit.com)) | Still in with a chance! | 28-1 |
 | ![Russia](http://img.fifa.com/images/flags/3/rus.png) [Russia](http://www.fifa.com/worldcup/teams/team=43965/groups.html) | Adam W | Still in with a chance! | 80-1 |
 | ![South Korea](http://img.fifa.com/images/flags/3/kor.png) [South Korea](http://www.fifa.com/worldcup/teams/team=43822/groups.html) | Liza J | Still in with a chance! | 400-1 |
-| ![Spain](http://img.fifa.com/images/flags/3/esp.png) [Spain](http://www.fifa.com/worldcup/teams/team=43969/groups.html) | Martin U ([*Raising IT*](http://www.raisingit.com)) | Still in with a chance! | 6-1 |
+| ![Spain](http://img.fifa.com/images/flags/3/esp.png) [Spain](http://www.fifa.com/worldcup/teams/team=43969/groups.html) | Martin U ([*Raising IT*](http://www.raisingit.com)) | They’re out :( | 6-1 |
 | ![Switzerland](http://img.fifa.com/images/flags/3/sui.png) [Switzerland](http://www.fifa.com/worldcup/teams/team=43971/groups.html) | Jennifer P ([*Impact Hub*](http://islington.impacthub.net)) | Still in with a chance! | 100-1 |
 | ![Uruguay](http://img.fifa.com/images/flags/3/uru.png) [Uruguay](http://www.fifa.com/worldcup/teams/team=43930/groups.html) | Jennifer P ([*Impact Hub*](http://islington.impacthub.net)) | Still in with a chance! | 33-1 |
 | ![USA](http://img.fifa.com/images/flags/3/usa.png) [USA](http://www.fifa.com/worldcup/teams/team=43921/groups.html) | Will ([*Raising IT*](http://www.raisingit.com)) | Still in with a chance! | 200-1 |
@@ -49,4 +52,12 @@
 </xmp>
 
 <script src="strapdown.js"></script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script>
+  $(function() {
+    $("td:contains(':(')").each(function() {
+      $(this).parent().addClass('sadface');
+    });
+  });
+</script>
 </html>
